@@ -1,74 +1,45 @@
-# Particle Jekyll Theme
+### Update 03/08/2016
+I'm working on making leonids a [jekyll theme](https://jekyllrb.com/docs/themes/) so that people can easily install the theme without having to fork or download anything from here. Actually the first gem version is published, you can install it by following the official [doc](https://jekyllrb.com/docs/themes/). You can find the rubygem version [here](https://rubygems.org/gems/leonids). But it will be on beta until I can finish the doc of how you can install leonids with the rubygem version.
 
-![](./particle.jpg)
+### Update 05/06/2016
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+Important! It's better to download the gzipped files instead of forking the repo. I would really appreciate if you could give me a star. 😁
 
-The Theme features:
+This project is under MIT license, so feel free to make it your own.
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
+# Leonids Jekyll Themes
 
-## Basic Setup
+**[Leonids](http://renyuanz.github.io/leonids)** is a clean Jekyll theme perfect for powering your GitHub hosted blog.
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Particle Theme](https://github.com/nrandecker/particle/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
+## What is Leonids?
 
-## Site and User Settings
+* Responsive templates. Looking good on mobile, tablet, and desktop.
+* Simple and clear permalink structure.
+* Support for Disqus Comments.
+* Support for multi-authors.
+* **And** the Leonids (/ˈliːənɪdz/ lee-ə-nidz) are a prolific meteor shower associated with the comet [Tempel-Tuttle](https://en.wikipedia.org/wiki/55P/Tempel%E2%80%93Tuttle).
 
-You have to fill some informations on `_config.yml` to customize your site.
+See a [demo](http://renyuanz.github.io/leonids/) hosted on GitHub.
+
+## Quick setup
 
 ```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
-
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
+git clone https://github.com/renyuanz/leonids
+cd leonids
+jekyll server
 ```
 
-**Don't forget to change your url before you deploy your site!**
+Check out your awesome blog at `http://localhost:4000` and Cheers!
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+## Running with Docker
 
-## Running the blog in local
+```
+docker run --rm -it --volume=$PWD:/srv/jekyll -p 4000:4000 jekyll/jekyll:pages jekyll serve --watch --force_polling
+```
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+## TODO
 
-- Install [NodeJS](https://nodejs.org/)
-- Run `npm install`
-- Run `gulp`
-
-## Questions
-
-Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
-
-## License
-
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
-
-## Credits
-
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
+- [ ] Build a timeline page.
+- [ ] Build a portfolio page.
+- [ ] Redesign categories page. Ref: [dribbble: blog category section By Ilja Miskov](https://dribbble.com/shots/2274792-Blog-Category-Selection)
+- [ ] Multi languages support.
