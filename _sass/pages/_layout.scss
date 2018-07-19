@@ -35,16 +35,16 @@
   }
   .author_job {
     display: block;
-    color: #E3CEF6;
+    color: #E2A9F3;
     font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase;
     margin: -5px auto 10px;
   }
   .author_bio {
-    font-size: 1.3em;
+    font-size: 100%;
     display: block;
-    color: #FBEFEF;
+    color: #E2A9F3;
   }
   @include media-query($medium-screen) {
     text-align: right;
@@ -92,7 +92,7 @@
       color: $secondary;
       &:hover,
       &:focus {
-        color: lighten($secondary, 14%);
+        color: lighten(#E2A9F3, 14%);
       }
     }
   }
