@@ -3,7 +3,7 @@
   background-color: $background-color;
   position: fixed;
   text-align: center;
-  width: 50%;
+  width: 100%;
   min-height: 400px;
   padding: 30px 15px 20px;
   z-index: 1;
@@ -20,7 +20,12 @@
 .cover-card {
   color: $text-color;
   padding: 0 30px;
-
+  .avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    float: none;
+  }
   .author_name {
     display: block;
     color: #F36170;
