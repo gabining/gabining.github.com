@@ -35,14 +35,15 @@
   }
   .author_job {
     display: block;
-    color: #DA81F5;
-    font-size: 0.9em;
+    color: #E2A9F3;
+    font-size: 1.3em;
     font-weight: 600;
     text-transform: uppercase;
     margin: -5px auto 10px;
   }
   .author_bio {
-    font-size: 90%;
+    font-size: 95%;
+    color: #E2A9F3;
     display: block;
   }
   @include media-query($medium-screen) {
@@ -61,10 +62,10 @@
       display: inline-block;
       margin-left: 1em;
       a.social-link-item {
-        color: #DA81F5;
+        color: #E2A9F3;
         &:hover,
         &:focus {
-          color: lighten(#DA81F5, 14%);
+          color: lighten(#E2A9F3, 14%);
         }
       }
     }
@@ -88,7 +89,7 @@
       margin-top: 1em;
       text-transform: lowercase;
       font-size: 85%;
-      color: #DA81F5;
+      color: #E2A9F3;
       &:hover,
       &:focus {
         color: lighten(#E2A9F3, 14%);
