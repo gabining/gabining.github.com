@@ -35,9 +35,9 @@
   }
   .author_job {
     display: block;
-    color: #E2A9F3;
-    font-size: 1.5em;
-    font-weight: 700;
+    color: #DA81F5;
+    font-size: 1.3em;
+    font-weight: 600;
     text-transform: uppercase;
     margin: -5px auto 10px;
   }
@@ -62,10 +62,10 @@
       display: inline-block;
       margin-left: 1em;
       a.social-link-item {
-        color: #E3CEF6;
+        color: #DA81F5;
         &:hover,
         &:focus {
-          color: lighten($secondary, 14%);
+          color: lighten(#DA81F5, 14%);
         }
       }
     }
@@ -89,7 +89,7 @@
       margin-top: 1em;
       text-transform: lowercase;
       font-size: 85%;
-      color: $secondary;
+      color: #DA81F5;
       &:hover,
       &:focus {
         color: lighten(#E2A9F3, 14%);
