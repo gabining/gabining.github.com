@@ -29,20 +29,22 @@
   .author_name {
     display: block;
     color: #F36170;
-    font-size: 1.75em;
+    font-weight: bold;
+    font-size: 2.50em;
     text-transform: lowercase;
   }
   .author_job {
     display: block;
-    color: $secondary;
-    font-size: 0.8em;
+    color: #E3CEF6;
+    font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase;
     margin: -5px auto 10px;
   }
   .author_bio {
-    font-size: 90%;
+    font-size: 1.3em;
     display: block;
+    color: #FBEFEF;
   }
   @include media-query($medium-screen) {
     text-align: right;
@@ -60,7 +62,7 @@
       display: inline-block;
       margin-left: 1em;
       a.social-link-item {
-        color: $secondary;
+        color: #E3CEF6;
         &:hover,
         &:focus {
           color: lighten($secondary, 14%);
