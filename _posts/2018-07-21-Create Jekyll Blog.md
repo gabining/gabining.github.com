@@ -50,9 +50,11 @@ comments: true
 
 
 
-
+----
 
 #### [새로운 페이지 생성하기]
+
+
 
 1. Git Bash로 새로운 페이지 생성하기
 
@@ -62,13 +64,14 @@ comments: true
      jekyll new 내깃허브명.github.com
      ```
 
-     ![](![jeykll install](https://user-images.githubusercontent.com/40630535/43034389-7136d20c-8d16-11e8-9bc4-588485464a8e.png))
+     
 
    * 위에서 생성한 디렉토리로 이동
 
      ```
      cd  ~/내깃허브명.github.com
      ```
+     
 
    * 서버 구동하기
 
@@ -78,18 +81,23 @@ comments: true
      # 테마 설치 해봤을 때
      bundle exec jekyll serve
      ```
+     
 
    * 주소창에  `localhost:4000`입력 후 페이지 구동 여부 확인(성공 시 아래 이미지가 뜨게 된다.)
 
-     ![](![blog_success](https://user-images.githubusercontent.com/40630535/43034394-7d107704-8d16-11e8-960a-21ad465b0a03.png))
+     
 
 
 
 
 
 
+
+----
 
 #### [깃허브 연동하기]
+
+
 
 1. 내 repository URL 복사
 
@@ -113,7 +121,11 @@ comments: true
 
 
 
+------
+
 #### [Jekyll Theme 설정]
+
+
 
 1. Jekyll Theme 다운로드 및 압축 해제
 
@@ -146,9 +158,11 @@ comments: true
 
 
 
-
+-----
 
 #### [참고 - git push error]
+
+
 
 * github(변동사항 있음) → local
 
