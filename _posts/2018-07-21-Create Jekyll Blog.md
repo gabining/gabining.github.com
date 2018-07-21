@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Jekyll Blog
-excerpt: "Jekyll Blog 생성하기"
+excerpt: "Jekyll로 Blog 생성하기"
 categories: [Jekyll Blog]
 comments: true
 ---
@@ -48,6 +48,10 @@ comments: true
 
 
 
+
+
+
+
 #### [새로운 페이지 생성하기]
 
 1. Git Bash로 새로운 페이지 생성하기
@@ -58,7 +62,7 @@ comments: true
      jekyll new 내깃허브명.github.com
      ```
 
-     ![](C:\Users\Kavin\Desktop\jeykll install.png)
+     ![](![jeykll install](https://user-images.githubusercontent.com/40630535/43034389-7136d20c-8d16-11e8-9bc4-588485464a8e.png))
 
    * 위에서 생성한 디렉토리로 이동
 
@@ -77,7 +81,13 @@ comments: true
 
    * 주소창에  `localhost:4000`입력 후 페이지 구동 여부 확인(성공 시 아래 이미지가 뜨게 된다.)
 
-     ![](C:\Users\Kavin\Desktop\blog_success.png)
+     ![](![blog_success](https://user-images.githubusercontent.com/40630535/43034394-7d107704-8d16-11e8-960a-21ad465b0a03.png))
+
+
+
+
+
+
 
 #### [깃허브 연동하기]
 
@@ -96,6 +106,10 @@ comments: true
    git commit -m "Create Blog"
    git push -u origin master
    ```
+
+
+
+
 
 
 
@@ -127,6 +141,10 @@ comments: true
    git commit -m "Change Theme"
    git push -u origin master
    ```
+
+
+
+
 
 
 
