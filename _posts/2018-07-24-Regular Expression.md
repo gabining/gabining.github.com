@@ -1,13 +1,10 @@
 ---
 layout: post
-title: Regular Expression
-excerpt: "정규표현식 알아보기"
+title: Learn Regular Expression
+excerpt: "정규 표현식 알아보기"
 categories: [Regular Expression]
 comments: true
 ---
-
-
-# Regular Expression
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Regular Expression Exercise
-excerpt: "정규표현식 연습문제 풀이"
+excerpt: "정규 표현식 문제 풀이"
 categories: [Regular Expression]
 comments: true
 ---
