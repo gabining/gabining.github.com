@@ -7,13 +7,13 @@ comments: true
 ---
 
 
-# Starbucks_Korea Crawler using Selenium
+# Javascript기반 스타벅스 웹페이지 크롤링
 
 -------
 
 
 
-selenium과 bs4를 설치해 줍니다
+#### selenium과 bs4를 설치해 줍니다
 
 
 ```python
@@ -206,3 +206,79 @@ df_Sejong['address'] = df_Sejong['address'].str.replace(r'\d{2,3}-\d{3,4}-\d{4}'
 # csv파일로 저장
 df_Sejong.to_csv("C:/dataitgirls/starbucks_세종.csv", header=True, index=True, encoding='euc-kr')
 ```
+
+
+
+
+
+
+### #3 크롤링 자동화 시키기
+
+스타벅스 홈페이지에서 **<u>'시'와 '군/구' 부분이 새로 추가/제거 되어도 크롤링이 가능하도록</u>** ```if ~ else```문을 활용해 코드를 수정했습니다.
+
+```python
+# while문을 돌면서 각 지역별 스타벅스 지점명과 주소 크롤링 - 세종시 포함
+i = 0
+while i < len(city_name_list):
+    # 지역선택 클릭하기
+    location_search = driver.find_element_by_class_name('loca_search')
+    location_search.click()
+    sleep(5)
+    
+    # 시 선택
+    city= driver.find_element_by_class_name('sido_arae_box')
+    city_li = city.find_elements_by_tag_name('li')
+    city_li[i].click()
+    sleep(5)
+    
+    # 세종시가 구/군에 해당하는 정보를 가지고 있는지 없는지를 판별
+    is_Sejong = [ el.text for el in driver.find_elements_by_xpath("//*[@id='container']/div/form/fieldset/div/section/article[1]/article/article[2]/div[2]")]
+
+
+    # 세종시일때 (구/군 선택 X)
+    if len(is_Sejong[0]) == 0:
+        pass
+    
+    # 세종시가 아닌 시일때 (구/군 선택 O)
+    else:
+        #구군에서 '전체' 선택하도록 하기
+        gugun = driver.find_element_by_class_name('gugun_arae_box')
+        gu_li = gugun.find_element_by_tag_name('li')
+        gu_li.click()
+        sleep(5)
+        
+    source = driver.page_source
+    bs = bs4.BeautifulSoup(source,'lxml')
+    entire = bs.find('ul', class_='quickSearchResultBoxSidoGugun')
+    li_list = entire.find_all('li')
+
+    name_list = []
+    address_list = []
+
+    # DT점명 가져오기
+    for name in li_list:
+        name_list.append(name.find('strong').text)
+
+    # DT주소 가져오기
+    for address in li_list:
+        address_list.append(address.find('p').text)
+
+
+    # csv파일 저장하기 - path, filename 설정(지역별로 파일명 상이)
+    path = "C:/dataitgirls/" #저장하고 싶은 경로 앞부분 
+    full_path = path + 'starbucks_' + city_name_list[i] +'.csv' #현재 경로 + 파일명
+
+    df = pd.DataFrame({'name':name_list, 'address':address_list})
+
+    # 'address' 칼럼에 전화번호 제거
+    df['address'] = df['address'].str.replace(r'\d{2,3}-\d{3,4}-\d{4}', '')
+
+    # csv파일로 저장
+    df.to_csv(full_path, header=True, index=True, encoding='euc-kr')
+    
+    i = i+1
+```
+
+
+
+크롤링 코드는 [https://brunch.co.kr/@jk-lab/18](https://brunch.co.kr/@jk-lab/18) 의 글을 참고하여 작성하였습니다
